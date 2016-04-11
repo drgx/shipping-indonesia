@@ -1,8 +1,0 @@
-{
-	"APIHostName": "http://api.rajaongkir.com",	
-	"APIUrl": {
-		"city": "/starter/city",
-		"province": "/starter/province",
-		"cost": "/starter/cost"
-	}
-}
