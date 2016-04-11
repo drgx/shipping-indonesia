@@ -1,6 +1,6 @@
 {
   "name": "shipping-indonesia",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Package for fetching Indonesia shipping information(JNE, POS, TIKI)",
   "main": "index.js",
   "scripts": {
