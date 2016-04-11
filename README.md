@@ -2,18 +2,16 @@
 
 A NPM Package for fetching Indonesia shipping information(JNE, POS, TIKI)
 
-This is package using rajaongkir starter API and this is Unofficial rajaongkir.com NPM package.
-You must register at www.rajaongkir.com and get API key for using this package
-
-this package is supported with cache, so provide minimum call to rajaongkir api
+This package is supported with cache, so provide minimum call to rajaongkir api
 # Install
 
 `npm install indonesia-shipping`
 
 #Usage(init)
+This is package using rajaongkir starter API and this is Unofficial rajaongkir.com NPM package. You must register at www.rajaongkir.com and get API key for using this package
 ```
 var shipping = require('shipping-indonesia');
-shipping.init(your-rajaongkir-api-key);
+shipping.init('your-rajaongkir-api-key');
 
 ```
 
@@ -27,14 +25,14 @@ shipping.getAllProvince(results => {
 });
 ```
 
-##Get Provinces information by province_id
+### Get specific provinces information by province_id
 ```
 shipping.getProvinceById(province_id, result => {
   console.log(result);
 });
 ```
 
-##Get All City
+### Get All City
 this is commonly use for city autocomplete
 ```
 shipping.getAllCity(results => {
@@ -42,14 +40,14 @@ shipping.getAllCity(results => {
 });
 ```
 
-##GET City information by city_id
+### GET specific city information by city_id
 ```
 shipping.getCityById(city_id, result => {
   console.log(results);
 });
 ```
 
-##GET Shipping Cost
+### GET Shipping Cost
 Arguments:
 * origin: city_id
 * destination: city_id
@@ -64,7 +62,7 @@ shipping.getShippingCost(origin, destination, weight, courier, result => {
   console.log(result);
 });
 ```
-___Example___:
+__Example__:
 * origin: 501 is DI Yogyakarta city_id
 * destination: 144 is Denpasar city_id
 * weight: 1700 gram is equals 1.7 KG
@@ -75,7 +73,7 @@ shipping.getShippingCost(501, 144, 1700, 'jne', result => {
 });
 ```
 
-___Result Example__:
+__Result Example__:
 ```
 "origin_details":{
    "city_id":"501",
