@@ -145,8 +145,8 @@ __Result Example__:
 ]
 
 ```
-# Bug or problem?
-please contact me at ryan.nixon.salim.com
+# Bug, problem or feedback?
+Please contact me at ryan.nixon.salim.com
 or create issue at https://github.com/drgx/indonesia-shipping
 # License
 MIT
