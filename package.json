@@ -1,7 +1,7 @@
 {
   "name": "shipping-indonesia",
   "version": "1.0.1",
-  "description": "A Package for fetching Indonesia shipping information(JNE, POS, TIKI) using Raja Ongkir Starter API",
+  "description": "A Package for fetching Indonesia shipping information(JNE, POS, TIKI)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
