@@ -13,9 +13,9 @@
     "JNE",
     "TIKI",
     "TIKI Indo",
-    "POS Indoensia"    
+    "POS Indoensia"
   ],
-  "author": "Ryan Nixon Salim",
+  "author": "Ryan Nixon Salim<ryan.nixon.salim@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "config": "^1.20.0",

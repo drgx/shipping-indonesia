@@ -51,16 +51,16 @@ exports.getProvinceById = (provinceId, result) => {
   }
 };
 
+exports.getAllcity = result => {
+  this.getAPIResult(config.get('APIUrl.city'), 'GET', headers, result);
+};
+
 exports.getCityById = (cityId, result) => {
   if (cityId && Number.isInteger(cityId)) {
     this.getAPIResult(`${config.get('APIUrl.city')}?id=${cityId}`, 'GET', headers, result);
   } else {
     console.error('cityId must be filled and integer');
   }
-};
-
-exports.getAllcity = result => {
-  this.getAPIResult(config.get('APIUrl.city'), 'GET', headers, result);
 };
 
 exports.getShippingCost = (origin, destination, weight, courier, result) => {
@@ -81,6 +81,11 @@ exports.getShippingCost = (origin, destination, weight, courier, result) => {
   fetch(hostName, options).then(res => {
     return res.json();
   }).then(json => {
-    result(json.rajaongkir.results);
+    const apiResult = {
+      origin_details: json.rajaongkir.origin_details,
+      destination_details: json.rajaongkir.destination_details,
+      results: json.rajaongkir.results
+    };
+    result(apiResult);
   });
 };
