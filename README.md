@@ -1,8 +1,8 @@
-# indonesia-shipping
+# Indonesia-shipping
 
 A NPM Package for fetching Indonesia shipping information(JNE, POS, TIKI)
 
-This package is supported with cache, so provide minimum call to rajaongkir api
+This package is supported with cache, so less call to rajaongkir api
 # Install
 
 `npm install indonesia-shipping`
