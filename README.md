@@ -1,11 +1,11 @@
-# Indonesia-shipping
+# Shipping-indonesia
 
 A NPM Package for fetching Indonesia shipping information(JNE, POS, TIKI)
 
 This package is supported with cache, so less call to rajaongkir api
 # Install
 
-`npm install indonesia-shipping`
+`npm install shipping-indonesia`
 
 #Usage(init)
 This is package using rajaongkir starter API and this is Unofficial rajaongkir.com NPM package. You must register at www.rajaongkir.com and get API key for using this package
@@ -160,6 +160,6 @@ __Result Example__:
 ```
 # Bug, problem or feedback?
 Please contact me at ryan.nixon.salim.com
-or create issue at https://github.com/drgx/indonesia-shipping
+or create issue at https://github.com/drgx/shipping-indonesia
 # License
 MIT
