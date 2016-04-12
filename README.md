@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/drgx/shipping-indonesia.svg?branch=master)](https://travis-ci.org/drgx/shipping-indonesia)
+
 # Shipping-indonesia
 
 A NPM Package for fetching Indonesia shipping information(JNE, POS, TIKI)
