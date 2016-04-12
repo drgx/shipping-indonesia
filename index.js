@@ -14,6 +14,11 @@ const requestData = {
     cost: '/starter/cost'
   }
 };
+
+exports.init = key => {
+  headers.key = key;
+};
+
 exports.getAPIResult = (apiPath, method, headers, result) => {
   const hostName = `${requestData.APIHostName}${apiPath}`;
   const options = {
@@ -39,13 +44,15 @@ exports.getAPIResult = (apiPath, method, headers, result) => {
     return res.json();
   }).then(json => {
     shipCache.set(apiObject, json.rajaongkir.results, 10000);
-    shipCache.get(apiObject, (err, val) => console.log(val));
-    result(json.rajaongkir.results);
+    shipCache.get(apiObject, (err, val) => {
+      if (err) {
+        result(json.rajaongkir.results);
+      }
+      result(val);
+    });
   });
 };
-exports.init = key => {
-  headers.key = key;
-};
+
 exports.getAllProvince = result => {
   this.getAPIResult(requestData.APIUrl.province, 'GET', headers, result);
 };
@@ -95,4 +102,29 @@ exports.getShippingCost = (origin, destination, weight, courier, result) => {
     };
     result(apiResult);
   });
+};
+
+exports.checkPostalData = (postal, data, callback) => {
+  for (let a = 0; a < data.length; a++) {
+    if (data[a].postal_code == postal) {
+      callback(data[a]);
+      break;
+    }
+  }
+};
+
+exports.getCityByPostal = (postal, callback) => {
+  if (typeof postal === 'number') {
+    shipCache.get('city', (err, val) => {
+      if (err) {
+        this.getAllcity(results => {
+          this.checkPostalData(postal, results, callback);
+        });
+      } else {
+        this.checkPostalData(postal, val, callback);
+      }
+    });
+  } else {
+    console.error('Postal must be number');
+  }
 };

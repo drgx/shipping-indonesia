@@ -46,6 +46,19 @@ shipping.getCityById(city_id, result => {
   console.log(results);
 });
 ```
+### Get City Information from postal code
+
+```
+shipping.getCityByPostal(results => {
+  console.log(results);
+});
+```
+__Example__:
+```
+index.getCityByPostal(14140, result => {
+  console.log(result);
+});
+```
 
 ### GET Shipping Cost
 Arguments:
