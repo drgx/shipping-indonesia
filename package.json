@@ -4,7 +4,7 @@
   "description": "A Package for fetching Indonesia shipping information(JNE, POS, TIKI)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "shipping",
@@ -24,5 +24,8 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/drgx/indonesia-shipping.git"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
   }
 }
