@@ -161,7 +161,7 @@ __Result Example__:
 
 ```
 # Bug, problem or feedback?
-Please contact me at ryan.nixon.salim.com
+Please contact me at ryan.nixon.salim@gmail.com
 or create issue at https://github.com/drgx/shipping-indonesia/issues/new
 
 # References
