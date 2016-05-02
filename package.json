@@ -16,7 +16,7 @@
     "POS Indoensia"
   ],
   "author": "Ryan Nixon Salim<ryan.nixon.salim@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "node-cache": "^3.2.1",
     "node-fetch": "^1.5.0"
