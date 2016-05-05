@@ -65,7 +65,7 @@ exports.getProvinceById = (provinceId, result) => {
   }
 };
 
-exports.getAllcity = result => {
+exports.getAllCity = result => {
   this.getAPIResult(requestData.APIUrl.city, 'GET', headers, result);
 };
 
