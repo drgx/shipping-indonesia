@@ -9,7 +9,7 @@ This package is supported with cache, so less call to rajaongkir api
 
 `npm install shipping-indonesia`
 
-#Usage(init)
+# Usage(init)
 This is package using rajaongkir starter API and this is Unofficial rajaongkir.com NPM package. You must register at www.rajaongkir.com and get API key for using this package
 ```
 var shipping = require('shipping-indonesia');
@@ -19,7 +19,7 @@ shipping.init('your-rajaongkir-api-key');
 
 # Examples
 
-##Get All Provinces
+## Get All Provinces
 this is commonly use for Provinces autocomplete
 ```
 shipping.getAllProvince(results => {
