@@ -7,11 +7,13 @@ A NPM Package for fetching Indonesia shipping information(JNE, POS, TIKI)
 This package is supported with cache, so less call to rajaongkir api
 # Install
 
-`npm install shipping-indonesia`
+```bash
+npm install shipping-indonesia
+```
 
 # Usage(init)
 This is package using rajaongkir starter API and this is Unofficial rajaongkir.com NPM package. You must register at www.rajaongkir.com and get API key for using this package
-```
+```js
 var shipping = require('shipping-indonesia');
 shipping.init('your-rajaongkir-api-key');
 
@@ -21,14 +23,14 @@ shipping.init('your-rajaongkir-api-key');
 
 ## Get All Provinces
 this is commonly use for Provinces autocomplete
-```
+```js
 shipping.getAllProvince(results => {
   console.log(results);
 });
 ```
 
 ### Get specific provinces information by province_id
-```
+```js
 shipping.getProvinceById(province_id, result => {
   console.log(result);
 });
@@ -36,27 +38,27 @@ shipping.getProvinceById(province_id, result => {
 
 ### Get All City
 this is commonly use for city autocomplete
-```
+```js
 shipping.getAllCity(results => {
   console.log(results);
 });
 ```
 
 ### GET specific city information by city_id
-```
+```js
 shipping.getCityById(city_id, result => {
   console.log(results);
 });
 ```
 ### Get City Information from postal code
 
-```
+```js
 shipping.getCityByPostal(results => {
   console.log(results);
 });
 ```
 __Example__:
-```
+```js
 index.getCityByPostal(14140, result => {
   console.log(result);
 });
@@ -72,7 +74,7 @@ Arguments:
   * TIKI: `tiki`
   * POS Indonesia:  `pos`
 
-```
+```js
 shipping.getShippingCost(origin, destination, weight, courier, result => {
   console.log(result);
 });
@@ -82,14 +84,14 @@ __Example__:
 * destination: 144 is Denpasar city_id
 * weight: 1700 gram is equals 1.7 KG
 * courier: jne
-```
+```js
 shipping.getShippingCost(501, 144, 1700, 'jne', result => {
   console.log(result);
 });
 ```
 
 __Result Example__:
-```
+```json
 "origin_details":{
    "city_id":"501",
    "province_id":"5",
